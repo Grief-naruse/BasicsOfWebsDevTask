@@ -1,6 +1,6 @@
 <!--
-Author: Rubaud Ilan
-Date: 2025-19-09
+Author: Your Full Name (CHANGE THIS)
+Date: 2025-09-01 (CHANGE THIS)
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,31 +14,36 @@ Date: 2025-19-09
     <h1>My Multimedia Showcase</h1>
 
     <section class="block">
-      <img src="media/photo.jpg" alt="Mountain landscape at sunrise (CC-licensed)">
+      <!-- Example CC image (Pixabay: free for commercial use, no attribution required) -->
+      <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+           alt="Tree at sunset - Pixabay CC0 license">
     </section>
 
     <section class="block">
       <audio controls>
-        <source src="media/audio.mp3" type="audio/mpeg">
-        <source src="media/audio.ogg" type="audio/ogg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </section>
 
-    <section class="block">
-      <video controls width="500">
-        <source src="media/video.mp4" type="video/mp4">
-        <source src="media/video.webm" type="video/webm">
-        Your browser does not support the video element.
-      </video>
-    </section>
+   <section class="block">
+  <video controls width="500">
+    <!-- MP4 H.264 (très compatible) -->
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+    <!-- WebM VP9 (fallback) -->
+    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+    Your browser does not support the video element.
+  </video>
+</section>
+
 
     <section class="block">
       <p>
-        Media sources: replace <code>media/photo.jpg</code>, <code>media/audio.mp3</code>, and
-        <code>media/video.mp4</code> with your own files. Ensure the image is Creative Commons
-        licensed (e.g., CC BY or CC BY-SA) and include proper attribution in your project README
-        or below the media as required by the license.
+        This multimedia content is sourced from <a href="https://pixabay.com/" target="_blank">Pixabay</a>  
+        (image, CC0 license),  
+        <a href="https://www.soundhelix.com/" target="_blank">SoundHelix</a> (royalty-free demo audio),  
+        and <a href="https://sample-videos.com/" target="_blank">Sample Videos</a> (public demo video).  
+        These are provided under free or Creative Commons licenses for educational/demo purposes.
       </p>
     </section>
   </main>
