@@ -10,7 +10,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #fff;
-  background: linear-gradient(135deg, #007bff, #6a11cb);
+  background-color: #007bff; /* bleu uni */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
