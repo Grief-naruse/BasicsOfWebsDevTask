@@ -1,0 +1,71 @@
+/*
+Author: Rubaud Ilan
+Date: 2025-19-09
+*/
+
+/* Page background */
+body {
+  background-color: #001f3f; /* dark blue */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #f5f5f5;
+}
+
+/* Layout */
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center; /* centers inline-block media */
+}
+
+/* Headings */
+h1 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin: 0 0 16px;
+}
+
+/* Paragraph */
+p {
+  color: #e8e8e8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Spacing between sections */
+.block {
+  margin: 24px 0;
+}
+
+/* Image rules per assignment */
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center */
+  border-radius: 6px;
+}
+
+/* Center audio/video */
+audio, video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Optional: subtle rounding for video */
+video {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Links if you add any later */
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
