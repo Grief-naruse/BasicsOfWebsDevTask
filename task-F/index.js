@@ -1,6 +1,6 @@
 // index.js
-// Author: Ville Heikkiniemi
-// Date: 2025-10-06
+// Author: RUBAUD Ilan
+// Date: 2025-24-10
 // Handles adding new course rows with day marks (✅/❌)
 
 document.addEventListener("DOMContentLoaded", () => {
