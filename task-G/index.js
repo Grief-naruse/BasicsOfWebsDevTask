@@ -1,5 +1,5 @@
 // index.js
-// Author: adapted for registration task
+// Author: Rubaud Ilan
 // Date: 2025-10-31
 
 document.addEventListener("DOMContentLoaded", () => {
