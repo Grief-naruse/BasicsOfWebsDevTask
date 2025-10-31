@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Timetable / Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <!--
+    Author: Ville Heikkiniemi (starter)
+    Adaptation: registration form added
+    Date: 2025-10-06 (starter) -> adapted 2025-10-31
+  -->
+
+  <header class="site-header">
+    <h1>Registration page</h1>
+  </header>
+
+  <main class="content">
+    <!-- Top row split into two blocks -->
+    <div class="top-grid">
+      <!-- Student info (30%) -->
+      <section class="student-info" aria-label="Student information">
+        <h2 class="student-info-title">Information</h2>
+        <p><span class="student-name">Your Name</span></p>
+        <p><span class="student-group">Group number</span></p>
+      </section>
+
+      <!-- Controls (70%): registration form -->
+      <section class="controls" aria-label="Registration form">
+        <h2 class="controls-title">Register</h2>
+
+        <form id="registrationForm" novalidate>
+          <!-- hidden timestamp auto-filled -->
+          <input type="hidden" id="timestamp" name="timestamp" value="">
+
+          <div class="form-row form-stack">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g., John Doe" required>
+            <div class="error" id="err-fullName" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row form-stack">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="e.g., name@example.com" required>
+            <div class="error" id="err-email" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row form-stack">
+            <label for="phone">Phone <small class="hint">Finnish style accepted: starts with +358 or 0, digits only</small></label>
+            <input id="phone" name="phone" type="tel" placeholder="+358401234567 or 0401234567" required>
+            <div class="error" id="err-phone" aria-live="polite"></div>
+          </div>
+
+          <div class="form-row form-stack">
+            <label for="birthDate">Birth date</label>
+            <input id="birthDate" name="birthDate" type="date" required>
+            <div class="error" id="err-birthDate" aria-live="polite"></div>
+          </div>
+
+          <fieldset class="form-row terms">
+            <label>
+              <input id="terms" name="terms" type="checkbox" required>
+              I accept the terms and conditions
+            </label>
+            <div class="error" id="err-terms" aria-live="polite"></div>
+          </fieldset>
+
+          <div class="form-row actions">
+            <button id="submitBtn" type="submit" class="btn">Submit</button>
+            <button id="resetBtn" type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table: appended rows will appear here -->
+    <div class="table-wrap">
+      <table class="table" id="timetable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Full name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Birth date</th>
+            <th>Terms</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- new rows appended here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+
+</html>
