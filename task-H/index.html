@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Timetable / Registration</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Your JS -->
+  <script defer src="index.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen">
+
+  <header class="bg-[#273e73] text-white py-6">
+    <h1 class="text-center text-2xl font-semibold">Registration page</h1>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 md:px-8 py-8">
+
+    <!-- Top row -->
+    <div class="flex flex-col md:flex-row gap-4 mb-6">
+
+      <!-- Student info -->
+      <section class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm md:w-[30%]">
+        <h2 class="text-lg font-semibold mb-3">Information</h2>
+        <p class="text-sm font-medium">Rubaud Ilan</p>
+        <p class="text-sm mt-2 text-gray-600">NITS24K</p>
+      </section>
+
+      <!-- Form -->
+      <section class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm md:w-[70%]">
+        <h2 class="text-lg font-semibold mb-4">Register</h2>
+
+        <form id="registrationForm" novalidate class="space-y-4">
+          <input type="hidden" id="timestamp" name="timestamp" value="">
+
+          <div class="flex flex-col">
+            <label for="fullName" class="mb-1 font-medium">Full name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="e.g., John Doe" required
+              class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            <div class="text-red-600 text-sm min-h-[1.1rem] mt-1" id="err-fullName"></div>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="email" class="mb-1 font-medium">Email</label>
+            <input id="email" name="email" type="email" placeholder="e.g., name@example.com" required
+              class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            <div class="text-red-600 text-sm min-h-[1.1rem] mt-1" id="err-email"></div>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="phone" class="mb-1 font-medium">
+              Phone <span class="text-xs text-gray-500">(Finnish: +358 or 0)</span>
+            </label>
+            <input id="phone" name="phone" type="tel" placeholder="+358401234567 or 0401234567" required
+              class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            <div class="text-red-600 text-sm min-h-[1.1rem] mt-1" id="err-phone"></div>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="birthDate" class="mb-1 font-medium">Birth date</label>
+            <input id="birthDate" name="birthDate" type="date" required
+              class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" />
+            <div class="text-red-600 text-sm min-h-[1.1rem] mt-1" id="err-birthDate"></div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input id="terms" name="terms" type="checkbox"
+              class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+            <label for="terms" class="text-sm">I accept the terms and conditions</label>
+          </div>
+          <div class="text-red-600 text-sm min-h-[1.1rem]" id="err-terms"></div>
+
+          <div class="flex gap-3 pt-2">
+            <button id="submitBtn" type="submit"
+              class="bg-gray-100 border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-200">
+              Submit
+            </button>
+            <button id="resetBtn" type="reset"
+              class="bg-white border border-gray-300 px-4 py-2 rounded-md hover:bg-gray-50">
+              Reset
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+      <table
+        class="w-full border-collapse text-xs md:text-sm whitespace-nowrap md:whitespace-normal"
+        id="timetable">
+
+        <thead>
+          <tr class="bg-[#273e73] text-white">
+            <th class="text-left p-2 md:p-3">Timestamp</th>
+            <th class="text-left p-2 md:p-3">Full name</th>
+            <th class="text-left p-2 md:p-3">Email</th>
+            <th class="text-left p-2 md:p-3">Phone</th>
+            <th class="text-left p-2 md:p-3">Birth date</th>
+            <th class="text-left p-2 md:p-3">Terms</th>
+          </tr>
+        </thead>
+
+        <tbody class="divide-y">
+          <!-- JS rows go here -->
+        </tbody>
+
+      </table>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
