@@ -149,26 +149,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Timestamp
     const tdTimestamp = document.createElement("td");
     tdTimestamp.textContent = values.timestamp;
+    tdTimestamp.className = "text-left p-2 md:p-3";
     tr.appendChild(tdTimestamp);
 
     // Full name
     const tdName = document.createElement("td");
     tdName.textContent = values.fullName;
+    tdName.className = "text-left p-2 md:p-3";
     tr.appendChild(tdName);
 
     // Email
     const tdEmail = document.createElement("td");
     tdEmail.textContent = values.email;
+    tdEmail.className = "text-left p-2 md:p-3";
     tr.appendChild(tdEmail);
 
     // Phone
     const tdPhone = document.createElement("td");
     tdPhone.textContent = values.phone;
+    tdPhone.className = "text-left p-2 md:p-3";
     tr.appendChild(tdPhone);
 
     // Birth date (display in ISO date)
     const tdBirth = document.createElement("td");
     tdBirth.textContent = values.birthDate;
+    tdBirth.className = "text-left p-2 md:p-3";
     tr.appendChild(tdBirth);
 
     // Terms
